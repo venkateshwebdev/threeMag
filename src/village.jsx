@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 export function Village(props) {
   const { nodes, materials } = useGLTF("/3d/Andys Robin in Sherwood 3.gltf");
   return (
-    <group {...props} dispose={null} position={[50,0.1,-200]} scale={0.05}>
+    <group {...props} dispose={null} position={[10,0.1,-200]} scale={0.05}>
       <mesh
         castShadow
         receiveShadow
