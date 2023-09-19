@@ -10,6 +10,7 @@ const App = () => {
         <Experience />
       </Canvas>
       <div style={{ position: "absolute", bottom: 0, right: 0,display:"flex",flexDirection:"column",alignItems:"end",gap:5,margin:5}}>
+      <h3>Click on the screen to start</h3>
         <div style={{ display: "flex", alignItems: "center",gap:5,fontWeight:"600" }}>
           Move Forward{" "}
           <div
