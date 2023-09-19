@@ -70,13 +70,13 @@ export function Model(props) {
     // Update camera's position to follow the character
     camera.position.set(
       characterPosition[0],
-      characterPosition[1] + 2,
-      characterPosition[2] + 10
+      characterPosition[1] + 10,
+      characterPosition[2] + 25
     );
     camera.lookAt(
       characterPosition[0],
       characterPosition[1] - 5,
-      characterPosition[2] - 300
+      characterPosition[2] - 500
     );
   });
 
@@ -87,7 +87,7 @@ export function Model(props) {
       dispose={null}
       position={characterPosition}
       rotation={[0, characterRotation, 0]}
-      scale={1.5}
+      scale={5}
     >
       <group name="Root_Scene" castShadow>
         <group name="RootNode" castShadow>
