@@ -18,7 +18,7 @@ export function Model(props) {
       setCharacterPosition((prevPos) => [
         prevPos[0],
         prevPos[1],
-        prevPos[2] - 0.3,
+        prevPos[2] - 0.6,
       ]);
       setCharacterRotation(Math.PI);
     } else if (e.key === "s" || e.key === "ArrowDown") {
@@ -26,13 +26,13 @@ export function Model(props) {
       setCharacterPosition((prevPos) => [
         prevPos[0],
         prevPos[1],
-        prevPos[2] + 0.3,
+        prevPos[2] + 0.6,
       ]);
       setCharacterRotation(Math.PI * 0);
     } else if (e.key === "a" || e.key === "ArrowRight") {
       setPlayAnimation("Run");
       setCharacterPosition((prevPos) => [
-        prevPos[0]+0.3,
+        prevPos[0]+0.6,
         prevPos[1],
         prevPos[2],
       ]);
@@ -40,7 +40,7 @@ export function Model(props) {
     } else if (e.key === "d" || e.key === "ArrowLeft") {
       setPlayAnimation("Run");
       setCharacterPosition((prevPos) => [
-        prevPos[0]-0.3,
+        prevPos[0]-0.6,
         prevPos[1],
         prevPos[2],
       ]);

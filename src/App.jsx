@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 const App = () => {
   return (
     <div style={{ height: "100vh", position: "relative" }}>
-      <Canvas shadows camera={{ position: [0, 2, 5] }}>
+      <Canvas  shadows camera={{ position: [0, 2, 5] }}>
         <OrbitControls makeDefault />
         <Experience />
       </Canvas>
