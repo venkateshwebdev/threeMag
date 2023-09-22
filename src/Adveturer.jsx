@@ -32,23 +32,32 @@ export function Model(props) {
     } else if (e.key === "a" || e.key === "ArrowRight") {
       setPlayAnimation("Run");
       setCharacterPosition((prevPos) => [
-        prevPos[0]+0.6,
+        prevPos[0] + 0.6,
         prevPos[1],
         prevPos[2],
       ]);
-      setCharacterRotation(Math.PI/2);
+      setCharacterRotation(Math.PI / 2);
     } else if (e.key === "d" || e.key === "ArrowLeft") {
       setPlayAnimation("Run");
       setCharacterPosition((prevPos) => [
-        prevPos[0]-0.6,
+        prevPos[0] - 0.6,
         prevPos[1],
         prevPos[2],
       ]);
-      setCharacterRotation(-Math.PI/2);
+      setCharacterRotation(-Math.PI / 2);
     } else if (e.key === " ") {
       setPlayAnimation("null");
     }
   };
+
+  useEffect(() => {
+    setPlayAnimation("Run");
+    setCharacterPosition((prevPos) => [
+      prevPos[0] + props.dx,
+      prevPos[1],
+      prevPos[2] + props.dy,
+    ]);
+  }, [props.dx,props.dy]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
